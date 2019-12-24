@@ -67,7 +67,7 @@ class Home extends Component {
     The idea is to add Machine Learning capabilities to an old application in a complete serverless way.
     </p>
     <h3>Problem statement</h3>
-      <img src="/imgs/Model.png" class="img-fluid rounded mx-auto d-block" alt="Graphical Problem Definition" />
+      <img src="/imgs/Model.png" className="img-fluid rounded mx-auto d-block" alt="Graphical Problem Definition" />
     
     <p>Based on that list of vehicles that have to be delivered, this data is fed into <abbr title="S3 Bucket"> sm-input-bucket</abbr> where all the process start.
       Having that data in that bucket, <abbr title="lambda function">runModel.py</abbr> function is triggered. This function has two main objectives :
@@ -76,7 +76,7 @@ class Home extends Component {
       Results can be seen here.</p>
       <p>Once Machine Learning has finished running, the user can see a rendered image with the best-rewarded route.</p>
   <p>This can be best depicted in this diagram : 
-      <img src="/imgs/arquitecture.png" class="img-fluid rounded mx-auto d-block" alt="architecture" />
+      <img src="/imgs/arquitecture.png" className="img-fluid rounded mx-auto d-block" alt="architecture" />
   </p></div>);
   }
 }
