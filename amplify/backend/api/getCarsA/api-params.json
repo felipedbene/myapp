@@ -1,0 +1,37 @@
+{
+    "paths": [
+        {
+            "name": "/getvh",
+            "lambdaFunction": "myapp64a7a7ef",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/POST"
+                ]
+            }
+        }
+    ],
+    "resourceName": "getCarsA",
+    "apiName": "getCarsA",
+    "functionArns": [
+        {
+            "lambdaFunction": "myapp64a7a7ef"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "amplify-myapp-felipo-170306-authRole",
+        "unAuthRoleName": "amplify-myapp-felipo-170306-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "myapp64a7a7ef",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
