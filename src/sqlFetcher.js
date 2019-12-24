@@ -28,11 +28,13 @@ class sqlFetcher extends Component {
         <p>
           The following button will do a query on MS SQL Server in the 
           <abbr>civar_ford</abbr> Database into our Bucket for later processing.<br />
+          <img src="/imgs/loadFlow.png" alt="Flow"/>
+          <br />
           <Button
       variant="warning"
       disabled={this.state.isLoading}
       onClick={!this.state.isLoading ? this.getSQLData : null}
-    >
+     >
       {this.state.isLoading ? 'Loading…' : 'Click to load'}
     </Button>
         </p>
