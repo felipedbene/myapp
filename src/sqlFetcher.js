@@ -12,7 +12,6 @@ class sqlFetcher extends Component {
       calledWithSuccess : false,
       response: ''
     };
-    this.getSQLData();
   }
 
   getSQLData = async (res) => {
