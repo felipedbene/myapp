@@ -7,7 +7,6 @@ import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import NavLink from "react-bootstrap/NavLink";
 import sqlFetcher from "./sqlFetcher";
 
 Amplify.configure(awsconfig);

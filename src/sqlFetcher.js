@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import Amplify, { API } from "aws-amplify";
-import { Loading } from "aws-amplify-react";
+import { API } from "aws-amplify";
 import Button from 'react-bootstrap/Button';
 import { Alert } from "react-bootstrap";
 
@@ -24,7 +23,6 @@ class sqlFetcher extends Component {
   };
 
   render() {
-    const message = this.state.response;
 
     return (
       <div>
