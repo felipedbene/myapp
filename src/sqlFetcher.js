@@ -23,7 +23,6 @@ class sqlFetcher extends Component {
   };
 
   render() {
-
     return (
       <div>
         <h3>Let's load some data !</h3>
