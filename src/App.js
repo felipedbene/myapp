@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import Amplify from "aws-amplify";
 import awsconfig from "./aws-exports";
 import { withAuthenticator } from "aws-amplify-react";
-
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import sqlFetcher from "./sqlFetcher";
+import scheduler from "./scheduler";
 
 Amplify.configure(awsconfig);
 
@@ -38,6 +38,9 @@ class Header extends Component {
                 <Nav.Link as={Link} to="/getSQL">
                   Data Load
                 </Nav.Link>
+                <Nav.Link as={Link} to="/scheduler">
+                  Schedule New ML Job
+                </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
@@ -45,6 +48,7 @@ class Header extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/getSQL" component={sqlFetcher} />
+            <Route exact path="/scheduler" component={scheduler} />
             <Route path="/*" component={NotFound} />
           </Switch>
         </div>
