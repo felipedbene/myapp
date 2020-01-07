@@ -32,6 +32,7 @@ build/
 dist/
 node_modules/
 aws-exports.js
+exports-bkp.js
 awsconfiguration.json
 amplifyconfiguration.json
 amplify-gradle-config.json
