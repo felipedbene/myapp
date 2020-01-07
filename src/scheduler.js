@@ -63,6 +63,7 @@ class scheduler extends Component {
       <div>
         <h1>Welcome to Machine Learning!</h1>
         <h4>Selecting a file and clicking submit will trigger a Job in SageMaker to Calcute the route</h4>
+        {this.state.calledWithSuccess ? <Alert variant="success" dismissible>Successfully scheduled sagemake job, you will be notified via e-mail on the status</Alert> : ''}
         {this.state.isLoading ? (               
              <ReactLoading type="spin" color="#FFA500" /> 
 ) : (<Form onSubmit={this.handleSubmit}>
@@ -72,7 +73,6 @@ class scheduler extends Component {
             </Form.Label>
             <Form.Control as="select">{fileList}</Form.Control>
           </Form.Group>
-          {this.state.calledWithSuccess ? <Alert variant="success" dismissible>Successfully scheduled sagemake job, you will be notified via e-mail on the status</Alert> : ''}
 
           <Button variant="warning" type="submit">
             Send
