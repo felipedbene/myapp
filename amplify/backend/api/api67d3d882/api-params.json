@@ -1,0 +1,41 @@
+{
+    "paths": [
+        {
+            "name": "/mlload",
+            "lambdaFunction": "myappa7752cc0",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ]
+            }
+        }
+    ],
+    "resourceName": "api67d3d882",
+    "apiName": "api67d3d882",
+    "functionArns": [
+        {
+            "lambdaFunction": "myappa7752cc0"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "amplify-myapp-felipo-170306-authRole",
+        "unAuthRoleName": "amplify-myapp-felipo-170306-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "myappa7752cc0",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

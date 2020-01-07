@@ -1,9 +1,12 @@
 import React, { Component } from "react";
+import { API } from "aws-amplify";
 import { Storage } from "aws-amplify";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Archivo from "./archivo";
 import ReactLoading from 'react-loading';
+import { Alert } from "react-bootstrap";
+
 
 
 class scheduler extends Component {
@@ -11,22 +14,30 @@ class scheduler extends Component {
     super();
     this.state = {
       isLoading : true,
-      data: []
+      data: [],
+      response :''
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  processFile() {
-    console.log("bla");
+  processFile = async () => {
+    console.log("called method");
+    this.setState({ isLoading: true});
+    const response = await API.post("api67d3d882", "/mlload");
+    console.log(response)
+    this.setState({isLoading:false, response: response.message, calledWithSuccess : true});
+    console.log(this.state);
   }
+  
 
   handleSubmit(e){
     e.preventDefault();    
     this.setState({
         isLoading : true          
     })                
-    console.log("enviado Form");  
+    console.log("enviado Form");
+    this.processFile();
   }
 
   getFileList() {
@@ -61,6 +72,8 @@ class scheduler extends Component {
             </Form.Label>
             <Form.Control as="select">{fileList}</Form.Control>
           </Form.Group>
+          {this.state.calledWithSuccess ? <Alert variant="success" dismissible>Successfully scheduled sagemake job, you will be notified via e-mail on the status</Alert> : ''}
+
           <Button variant="warning" type="submit">
             Send
           </Button>

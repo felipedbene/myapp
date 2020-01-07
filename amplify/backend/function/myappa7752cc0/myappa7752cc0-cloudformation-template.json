@@ -28,12 +28,12 @@
 				"FunctionName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"sgjob",
+						"myappa7752cc0",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"sgjob",
+									"myappa7752cc0",
 									"-",
 									{
 										"Ref": "env"
@@ -63,7 +63,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "amplify-myapp-felipo-170306-deployment",
-					"S3Key": "amplify-builds/sgjob-54377673474449647576-build.zip"
+					"S3Key": "amplify-builds/myappa7752cc0-657a6d36486573656446-build.zip"
 				}
 			}
 		},
@@ -73,12 +73,12 @@
 				"RoleName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"myappLambdaRole7c007824",
+						"myappLambdaRole8a644ad2",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"myappLambdaRole7c007824",
+									"myappLambdaRole8a644ad2",
 									"-",
 									{
 										"Ref": "env"

@@ -22,6 +22,11 @@
 			"service": "Lambda",
 			"providerPlugin": "awscloudformation",
 			"build": true
+		},
+		"myappa7752cc0": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true
 		}
 	},
 	"api": {
@@ -32,6 +37,20 @@
 				{
 					"category": "function",
 					"resourceName": "myapp64a7a7ef",
+					"attributes": [
+						"Name",
+						"Arn"
+					]
+				}
+			]
+		},
+		"api67d3d882": {
+			"service": "API Gateway",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [
+				{
+					"category": "function",
+					"resourceName": "myappa7752cc0",
 					"attributes": [
 						"Name",
 						"Arn"
