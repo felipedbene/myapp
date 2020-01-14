@@ -4,7 +4,6 @@ import ReactLoading from "react-loading";
 import ReactPlayer from "react-player";
 import Card from "react-bootstrap/Card";
 import CardColumns from "react-bootstrap/CardColumns";
-import "./movie";
 
 class viewer extends Component {
   constructor() {
@@ -46,6 +45,7 @@ class viewer extends Component {
             height="100%"
             controls
           />
+
         </Card.Body>
       </Card>
     ));
