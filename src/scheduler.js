@@ -43,11 +43,12 @@ class scheduler extends Component {
   getFileList() {
     Storage.list("", { level: "public" })
       .then(result => {
-        result.shift();
-        result.sort();
-        result.reverse();
+        const filtrado = result.filter( result => result.key.endsWith(".csv") )
+        filtrado.shift();
+        filtrado.sort();
+        filtrado.reverse();
         this.setState({
-          data: result,
+          data: filtrado,
           isLoading : false
         });
       })

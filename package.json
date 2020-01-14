@@ -13,8 +13,11 @@
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
+    "react-hls-player": "^0.0.5",
     "react-loading": "^2.0.3",
-    "react-scripts": "3.3.0"
+    "react-player": "^1.14.2",
+    "react-scripts": "3.3.0",
+    "react-video-tag": "^0.0.10"
   },
   "scripts": {
     "start": "react-scripts start",

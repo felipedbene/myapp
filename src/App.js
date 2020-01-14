@@ -8,6 +8,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import sqlFetcher from "./sqlFetcher";
 import scheduler from "./scheduler";
+import viewer from './viewer';
 
 Amplify.configure(awsconfig);
 
@@ -41,6 +42,9 @@ class Header extends Component {
                 <Nav.Link as={Link} to="/scheduler">
                   Schedule New ML Job
                 </Nav.Link>
+                <Nav.Link as={Link} to="/viewer">
+                  Check ML Videos
+                </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
@@ -49,6 +53,7 @@ class Header extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/getSQL" component={sqlFetcher} />
             <Route exact path="/scheduler" component={scheduler} />
+            <Route exact path="/viewer" component={viewer} />
             <Route path="/*" component={NotFound} />
           </Switch>
         </div>
