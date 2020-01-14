@@ -40,7 +40,7 @@ class viewer extends Component {
 
           <ReactPlayer
             key={archivo.key}
-            url={"http://d1qbcdoydtv3t1.cloudfront.net/" + archivo.key}
+            url={"https://d1qbcdoydtv3t1.cloudfront.net/" + archivo.key}
             width="100%"
             height="100%"
             controls
@@ -49,7 +49,7 @@ class viewer extends Component {
         </Card.Body>
       </Card>
     ));
-
+    // Static rendering for testing
     //const fileList = <ReactPlayer url="https://d1qbcdoydtv3t1.cloudfront.net/videos/FELIPO.m3u8" controls />
     return (
       <div>
