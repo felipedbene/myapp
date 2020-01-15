@@ -45,7 +45,7 @@ class sqlFetcher extends Component {
       disabled={this.state.isLoading}
       onClick={!this.state.isLoading ? this.getSQLData : null}
      >
-      {this.state.isLoading ? ('Loading…') : ('Click to Query SQL Server')}
+      {this.state.isLoading ? ('Please wait... Fetching data') : ('Click to Query SQL Server')}
     </Button>
          
        

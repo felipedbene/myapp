@@ -17,13 +17,10 @@ class viewer extends Component {
   getFileList() {
     Storage.list("videos/", { level: "public" })
       .then(result => {
+        console.log("Result")
         console.log(result);
-        const filtrado = result.filter(result => result.key.endsWith(".m3u8"));
-        filtrado.shift();
-        filtrado.sort();
-        filtrado.reverse();
         this.setState({
-          data: filtrado,
+          data: result,
           isLoading: false
         });
       })
@@ -31,16 +28,18 @@ class viewer extends Component {
   }
 
   render() {
+    console.log("Data Follows");
     console.log(this.state.data);
-
-    const fileList = this.state.data.map(archivo => (
+    let out = this.state.data.filter( data => data.key.endsWith("m3u8"))
+    const fileList = out.map(archivo => (
       <Card className="text-center">
         <Card.Body>
           <Card.Title>{archivo.key.replace("videos/", "")}</Card.Title>
 
           <ReactPlayer
             key={archivo.key}
-            url={"https://d1qbcdoydtv3t1.cloudfront.net/" + archivo.key}
+           // url={"http://d1qbcdoydtv3t1.cloudfront.net/" + archivo.key}
+            url={"/" + archivo.key}
             width="100%"
             height="100%"
             controls
