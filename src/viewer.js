@@ -4,6 +4,7 @@ import ReactLoading from "react-loading";
 import ReactPlayer from "react-player";
 import Card from "react-bootstrap/Card";
 import CardColumns from "react-bootstrap/CardColumns";
+import Image from 'react-bootstrap/Image'
 
 class viewer extends Component {
   constructor() {
@@ -54,7 +55,7 @@ class viewer extends Component {
       <div>
         <p>
           The videos below were simulations rendered from VRP SageMaker Model
-          <img src="/imgs/flow3.png" alt="Flow"/> </p>
+          <Image src="/imgs/flow3.png" alt="Flow" fluid/> </p>
         {this.state.isLoading ? (
           <ReactLoading type="spin" color="#FFA500" />
         ) : (

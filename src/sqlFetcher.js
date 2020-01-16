@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { API } from "aws-amplify";
 import Button from 'react-bootstrap/Button';
 import { Alert } from "react-bootstrap";
+import Image from 'react-bootstrap/Image'
 
 class sqlFetcher extends Component {
   constructor() {
@@ -35,7 +36,7 @@ class sqlFetcher extends Component {
         <p>
           The following button will do a query on MS SQL Server in the 
           <abbr>civar_ford</abbr> Database into our Bucket for later processing.<br />
-          <img src="/imgs/flow1.png" alt="Flow"/> </p>
+          <Image src="/imgs/flow1.png" alt="Flow" fluid/> </p>
           <br />
     {this.state.calledWithSuccess ? <Alert variant="success" dismissible>{this.state.response}</Alert> : ''}
     {this.state.calledWithError ? <Alert variant="danger" dismissible>Error executing lambda</Alert> : ''}
