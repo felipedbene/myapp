@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { API } from "aws-amplify";
 import Button from 'react-bootstrap/Button';
 import { Alert } from "react-bootstrap";
-import Image from 'react-bootstrap/Image'
 
 class sqlFetcher extends Component {
   constructor() {

@@ -5,7 +5,6 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Archivo from "./archivo";
 import ReactLoading from 'react-loading';
-import Image from 'react-bootstrap/Image'
 import { Alert } from "react-bootstrap";
 
 
