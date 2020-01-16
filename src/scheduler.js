@@ -66,7 +66,7 @@ class scheduler extends Component {
         <h1>Welcome to Machine Learning!</h1>
         <h4>Selecting a file and clicking submit will trigger a Job in SageMaker to Calcute the route</h4>
         
-          <Image src="/imgs/flow2.png" alt="Flow" fluid/> 
+          <img src="/imgs/flow2.png" alt="Flow" className="img-fluid rounded mx-auto d-block" /> 
         {this.state.calledWithSuccess ? <Alert variant="success" dismissible>Successfully scheduled sagemake job, you will be notified via e-mail on the status</Alert> : ''}
         {this.state.isLoading ? (               
              <ReactLoading type="spin" color="#FFA500" /> 
