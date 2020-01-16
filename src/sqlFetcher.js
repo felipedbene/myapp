@@ -35,7 +35,7 @@ class sqlFetcher extends Component {
         <p>
           The following button will do a query on MS SQL Server in the 
           <abbr>civar_ford</abbr> Database into our Bucket for later processing.<br />
-          <img src="/imgs/loadFlow.png" alt="Flow"/> </p>
+          <img src="/imgs/flow1.png" alt="Flow"/> </p>
           <br />
     {this.state.calledWithSuccess ? <Alert variant="success" dismissible>{this.state.response}</Alert> : ''}
     {this.state.calledWithError ? <Alert variant="danger" dismissible>Error executing lambda</Alert> : ''}

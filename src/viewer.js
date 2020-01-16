@@ -52,6 +52,9 @@ class viewer extends Component {
     //const fileList = <ReactPlayer url="https://d1qbcdoydtv3t1.cloudfront.net/videos/FELIPO.m3u8" controls />
     return (
       <div>
+        <p>
+          The videos below were simulations rendered from VRP SageMaker Model
+          <img src="/imgs/flow3.png" alt="Flow"/> </p>
         {this.state.isLoading ? (
           <ReactLoading type="spin" color="#FFA500" />
         ) : (

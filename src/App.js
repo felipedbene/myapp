@@ -83,8 +83,6 @@ class Home extends Component {
       Send that data to a S3 Bucket to allow a Amazon Sage Maker to calculate the best delivery route using Machine Learning.
       Results can be seen here.</p>
       <p>Once Machine Learning has finished running, the user can see a rendered image with the best-rewarded route.</p>
-  <p>This can be best depicted in this diagram : 
-      <img src="/imgs/arquitecture.png" className="img-fluid rounded mx-auto d-block" alt="architecture" />
-  </p></div>);
+</div>);
   }
 }
