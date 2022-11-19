@@ -16,7 +16,7 @@
     "react-hls-player": "^0.0.5",
     "react-loading": "^2.0.3",
     "react-player": "^1.14.2",
-    "react-scripts": "3.3.0",
+    "react-scripts": "5.0.1",
     "react-video-tag": "^0.0.10"
   },
   "scripts": {
